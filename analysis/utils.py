@@ -5,7 +5,7 @@ import json
 
 
 data = pd.read_csv(
-    r'D:\ClientProjects\CustomerSigmentation\Mall_Customers.csv')
+    r'/app/Mall_Customers.csv')
 x = data.iloc[:, [3, 4]].values
 
 
