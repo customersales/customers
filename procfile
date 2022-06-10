@@ -1,1 +1,1 @@
-web: gunicorn customerSegmentation.wsgi --log-file -
+web: gunicorn customerSegmentation.wsgi
