@@ -85,8 +85,17 @@ WSGI_APPLICATION = 'customerSegmentation.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'customer_sg'
+         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+
+        'NAME': ‘dcm0q247odi1b3’,
+
+        'USER': 'jramupydvixtgk',
+
+        'PASSWORD': '6261265f0982acf50e5904a2cd8a508cc944018cec35af560a63021cd89db7e9',
+
+        'HOST': 'ec2-52-73-184-24.compute-1.amazonaws.com',
+
+        'PORT': '5432',
     }
 }
 
