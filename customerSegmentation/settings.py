@@ -85,13 +85,18 @@ WSGI_APPLICATION = 'customerSegmentation.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dcm0q247odi1b3',
-        'USER': 'jramupydvixtgk',
-        'PASSWORD': '6261265f0982acf50e5904a2cd8a508cc944018cec35af560a63021cd89db7e9',
-        'HOST': 'ec2-52-73-184-24.compute-1.amazonaws.com',
-        'PORT': '5432',
+#     'default': {
+#          'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'dcm0q247odi1b3',
+#         'USER': 'jramupydvixtgk',
+#         'PASSWORD': '6261265f0982acf50e5904a2cd8a508cc944018cec35af560a63021cd89db7e9',
+#         'HOST': 'ec2-52-73-184-24.compute-1.amazonaws.com',
+#         'PORT': '5432',
+#     }
+    'default':{
+        'default': dj_database_url.config(
+        default=config('postgres://jramupydvixtgk:6261265f0982acf50e5904a2cd8a508cc944018cec35af560a63021cd89db7e9@ec2-52-73-184-24.compute-1.amazonaws.com:5432/dcm0q247odi1b3')
+    )
     }
 }
 
