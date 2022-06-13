@@ -11,8 +11,6 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-import dj_database_url
-from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -86,23 +84,11 @@ WSGI_APPLICATION = 'customerSegmentation.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-#     'default': {
-#          'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'dcm0q247odi1b3',
-#         'USER': 'jramupydvixtgk',
-#         'PASSWORD': '6261265f0982acf50e5904a2cd8a508cc944018cec35af560a63021cd89db7e9',
-#         'HOST': 'ec2-52-73-184-24.compute-1.amazonaws.com',
-#         'PORT': '5432',
-#     }
-    'default':{
-        'default': dj_database_url.config(
-        default=config('postgres://jramupydvixtgk:6261265f0982acf50e5904a2cd8a508cc944018cec35af560a63021cd89db7e9@ec2-52-73-184-24.compute-1.amazonaws.com:5432/dcm0q247odi1b3')
-    )
-    }
+    'default': {
+   'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'customer_sg'
 }
-
-db_from_env = dj_database_url.config(conn_max_age=600)
-DATABASES['default'].update(db_from_env)
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
