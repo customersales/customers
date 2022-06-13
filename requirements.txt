@@ -4,6 +4,7 @@ cffi==1.15.0
 charset-normalizer==2.0.12
 colorama==0.4.4
 cors==1.0.1
+
 cycler==0.11.0
 Django==4.0.3
 django-cors-headers==3.11.0
@@ -40,6 +41,7 @@ six==1.16.0
 sklearn==0.0
 sqlparse==0.4.2
 threadpoolctl==3.1.0
+
 tldextract==3.2.0
 tweepy==4.8.0
 tzdata==2022.1

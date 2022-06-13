@@ -23,9 +23,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-0*c0-9*1tqwlv061%ac!ut_y4+^&px_vm@*e*det5w=^p^^nwh'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-
-ALLOWED_HOSTS = ['https://customer-s.herokuapp.com/']
+DEBUG = True
+ALLOWED_HOSTS = ['customer-s.herokuapp.com']
 
 
 # Application definition
@@ -56,6 +55,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+<<<<<<< HEAD
+=======
+    
+>>>>>>> c7505c07d541cbc20d19ff958c672faeab352bea
 ]
 
 ROOT_URLCONF = 'customerSegmentation.urls'
@@ -84,11 +87,10 @@ WSGI_APPLICATION = 'customerSegmentation.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+   'ENGINE': 'django.db.backends.sqlite3',
         'NAME': 'customer_sg'
-    }
 }
-
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
