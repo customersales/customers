@@ -4,6 +4,7 @@ cffi==1.15.0
 charset-normalizer==2.0.12
 colorama==0.4.4
 cors==1.0.1
+decouple
 cycler==0.11.0
 Django==4.0.3
 django-cors-headers==3.11.0
