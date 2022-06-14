@@ -4,8 +4,9 @@ from sklearn.cluster import KMeans
 import json
 
 
-data = pd.read_csv(
-    r'D:/ClientProjects/CustomerSigmentation/backend/src/Mall_Customers.csv')
+# data = pd.read_csv(
+    # r'D:/ClientProjects/CustomerSigmentation/backend/src/Mall_Customers.csv')
+data = 'app/Mall_Customers.csv'
 x = data.iloc[:, [3, 4]].values
 
 
