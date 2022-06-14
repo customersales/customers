@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -82,10 +83,18 @@ WSGI_APPLICATION = 'customerSegmentation.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
+    #     'default': {
+    #    'ENGINE': 'django.db.backends.sqlite3',
+    #         'NAME': 'customer_sg'
+    # }
     'default': {
-   'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'customer_sg'
-}
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'dcm0q247odi1b3',
+        'USER': 'jramupydvixtgk',
+        'PASSWORD': '6261265f0982acf50e5904a2cd8a508cc944018cec35af560a63021cd89db7e9',
+        'HOST': 'ec2-52-73-184-24.compute-1.amazonaws.com',
+        'PORT': '5432',
+    }
 }
 
 # Password validation
@@ -121,7 +130,6 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
-import os
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
