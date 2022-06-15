@@ -119,12 +119,5 @@ def forgot_details(request):
         return JsonResponse({'message': 'please check, you have entered a wrong OTP..', 'success': False})
 
 
-@api_view(['GET', 'POST', 'PUT', 'DELETE'])
-def user_profile(request):
-    return JsonResponse({'data': 'profile'})
 
 
-@user_token
-@api_view(['GET', 'POST', 'DELETE'])
-def user_search_history(request):
-    return JsonResponse({'data': 'user_analysis_history'})

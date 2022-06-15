@@ -1,6 +1,5 @@
 from rest_framework.decorators import api_view
 from django.http.response import JsonResponse
-from user.views import user_token
 import pandas as pd
 import json
 from .utils import *
@@ -13,7 +12,7 @@ class NumpyEncoder(json.JSONEncoder):
             return obj.tolist()
         return json.JSONEncoder.default(self, obj)
 
-# @user_token
+
 @api_view(['GET'])
 def customer_analysis(request):
     type = request.GET['type']
@@ -21,11 +20,6 @@ def customer_analysis(request):
         cust_data = kmeans_cluster()
         data = json.dumps(cust_data,cls=NumpyEncoder)
         return JsonResponse(data,safe=False)
-
-    elif type == 'gender':
-        cust_data = gender()
-        data = json.dumps(cust_data,cls=NumpyEncoder)
-        return JsonResponse(data, safe=False)
         
     elif type == 'elbowmethod':
         cust_data = elbow_method()

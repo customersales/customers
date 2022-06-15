@@ -35,7 +35,3 @@ def kmeans_cluster():
     print(ymeans)
     return {'ymeans': ymeans, 'usual_customers': usual_customers, 'priority_customer': priority_customer, 'target_customer_young': target_customer_young, 'target_customer_old': target_customer_old,'list_4':list_4,'kmean_cluster': kmean_cluster}
 
-
-def gender():
-    size = data['Gender'].value_counts().to_list()
-    return size
