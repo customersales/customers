@@ -22,7 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('register/', user_view.user_register, name="User Registration"),
     path('authenticate/', user_view.user_authentication, name="User Authentication"),
-    path('user_search_history/', user_view.user_search_history, name="User Search History"),
     path('verifyemail/', user_view.verify_email),
     path('forgot/', user_view.forgot_details, name="forgot"),
 
