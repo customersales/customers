@@ -6,7 +6,7 @@ import json
 
 # data = pd.read_csv(
     # r'D:/ClientProjects/CustomerSigmentation/backend/src/Mall_Customers.csv')
-data = pd.read_csv('/app/Mall_Customers.csv')
+data = pd.read_csv('/app/global_store.csv')
 x = data.iloc[:, [3, 4]].values
 
 
